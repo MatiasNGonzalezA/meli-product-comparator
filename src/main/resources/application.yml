@@ -1,0 +1,80 @@
+# =========================
+# Base (común a todos los perfiles)
+# =========================
+server:
+  port: 8080
+  servlet:
+    context-path: /api
+  compression:
+    enabled: true
+    mime-types: text/html,text/xml,text/plain,text/css,application/json,application/javascript
+    min-response-size: 1KB
+
+spring:
+  application:
+    name: products-service
+  main:
+    banner-mode: console   # o "off" si no querés el banner
+  jackson:
+    serialization:
+      indent-output: true
+    default-property-inclusion: non_null
+    deserialization:
+      FAIL_ON_UNKNOWN_PROPERTIES: false
+    time-zone: America/Argentina/Buenos_Aires
+  mvc:
+    # CORS global (si tu API va a ser consumida desde front local o externo)
+    cors:
+      mappings:
+        "[/**]":
+          allowed-origins: "http://localhost:5173,http://localhost:3000"
+          allowed-methods: "GET,POST,PUT,PATCH,DELETE,OPTIONS"
+          allowed-headers: "*"
+          allow-credentials: true
+          max-age: 3600
+  web:
+    resources:
+      cache:
+        period: 3600  # cache estáticos si los hubiera (imágenes, etc.)
+
+# Actuator básico
+management:
+  endpoints:
+    web:
+      exposure:
+        include: health,info
+  endpoint:
+    health:
+      show-details: never
+
+# Logging general
+logging:
+  level:
+    root: INFO
+    org.springframework: INFO
+    com.tuorg: DEBUG  # bajalo a INFO en prod si querés
+
+# Propiedades de la app (custom)
+app:
+  data:
+    # Podés poner el JSON dentro de resources (classpath) o fuera (sistema de archivos).
+    # Ejemplo 1: usar un products.json en src/main/resources
+    source: "classpath:products.json"
+    # Ejemplo 2 (alternativa): path absoluto fuera del jar
+    # source: "file:/opt/app/data/products.json"
+  paging:
+    default-page-size: 20
+    max-page-size: 100
+  features:
+    enable-sorting: true
+    enable-filtering: true
+
+# Swagger/OpenAPI (opcional, si usás springdoc-openapi)
+springdoc:
+  api-docs:
+    enabled: true
+    path: /v3/api-docs
+  swagger-ui:
+    enabled: true
+    path: /swagger-ui
+    display-request-duration: true
