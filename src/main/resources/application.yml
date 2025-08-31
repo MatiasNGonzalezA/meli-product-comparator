@@ -1,6 +1,3 @@
-# =========================
-# Base (común a todos los perfiles)
-# =========================
 server:
   port: 8080
   servlet:
@@ -13,31 +10,33 @@ server:
 spring:
   application:
     name: products-service
+  profiles:
+    active: file  
   main:
-    banner-mode: console   # o "off" si no querés el banner
+    banner-mode: console
   jackson:
     serialization:
       indent-output: true
     default-property-inclusion: non_null
     deserialization:
-      FAIL_ON_UNKNOWN_PROPERTIES: false
+      fail-on-unknown-properties: false
     time-zone: America/Argentina/Buenos_Aires
   mvc:
-    # CORS global (si tu API va a ser consumida desde front local o externo)
     cors:
       mappings:
-        "[/**]":
-          allowed-origins: "http://localhost:5173,http://localhost:3000"
-          allowed-methods: "GET,POST,PUT,PATCH,DELETE,OPTIONS"
+        "/**":
+          allowed-origins:
+            - http://localhost:5173
+            - http://localhost:3000
+          allowed-methods: [GET, POST, PUT, PATCH, DELETE, OPTIONS]
           allowed-headers: "*"
           allow-credentials: true
           max-age: 3600
   web:
     resources:
       cache:
-        period: 3600  # cache estáticos si los hubiera (imágenes, etc.)
+        period: 1h
 
-# Actuator básico
 management:
   endpoints:
     web:
@@ -47,21 +46,17 @@ management:
     health:
       show-details: never
 
-# Logging general
 logging:
   level:
     root: INFO
     org.springframework: INFO
-    com.tuorg: DEBUG  # bajalo a INFO en prod si querés
+    org.springframework.web: INFO
+    org.springdoc: INFO
+    com.challenge.meli.product_comparator: DEBUG
 
-# Propiedades de la app (custom)
 app:
   data:
-    # Podés poner el JSON dentro de resources (classpath) o fuera (sistema de archivos).
-    # Ejemplo 1: usar un products.json en src/main/resources
-    source: "classpath:products.json"
-    # Ejemplo 2 (alternativa): path absoluto fuera del jar
-    # source: "file:/opt/app/data/products.json"
+    source: "classpath:data/products.json"
   paging:
     default-page-size: 20
     max-page-size: 100
@@ -69,8 +64,8 @@ app:
     enable-sorting: true
     enable-filtering: true
 
-# Swagger/OpenAPI (opcional, si usás springdoc-openapi)
 springdoc:
+  paths-to-match: /products/**
   api-docs:
     enabled: true
     path: /v3/api-docs

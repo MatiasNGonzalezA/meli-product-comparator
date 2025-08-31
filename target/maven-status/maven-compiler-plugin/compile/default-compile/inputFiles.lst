@@ -1,1 +1,25 @@
-C:\Users\matias.ngonzalez\OneDrive - NEORIS\Escritorio\challenge\product-comparator\product-comparator\src\main\java\com\challenge\meli\product_comparator\ProductComparatorApplication.java
+/Users/matiasgonzalez/Proyectos/product-comparator/product-comparator/src/main/java/com/challenge/meli/product_comparator/domain/policy/StrategyType.java
+/Users/matiasgonzalez/Proyectos/product-comparator/product-comparator/src/main/java/com/challenge/meli/product_comparator/api/mapper/ProductMapper.java
+/Users/matiasgonzalez/Proyectos/product-comparator/product-comparator/src/main/java/com/challenge/meli/product_comparator/domain/policy/impl/BestPriceStrategy.java
+/Users/matiasgonzalez/Proyectos/product-comparator/product-comparator/src/main/java/com/challenge/meli/product_comparator/domain/policy/ComparisonStrategy.java
+/Users/matiasgonzalez/Proyectos/product-comparator/product-comparator/src/main/java/com/challenge/meli/product_comparator/ProductComparatorApplication.java
+/Users/matiasgonzalez/Proyectos/product-comparator/product-comparator/src/main/java/com/challenge/meli/product_comparator/api/dto/CompareResponse.java
+/Users/matiasgonzalez/Proyectos/product-comparator/product-comparator/src/main/java/com/challenge/meli/product_comparator/application/impl/ComparisonServiceImpl.java
+/Users/matiasgonzalez/Proyectos/product-comparator/product-comparator/src/main/java/com/challenge/meli/product_comparator/application/port/in/ComparisonService.java
+/Users/matiasgonzalez/Proyectos/product-comparator/product-comparator/src/main/java/com/challenge/meli/product_comparator/application/port/out/ProductRepository.java
+/Users/matiasgonzalez/Proyectos/product-comparator/product-comparator/src/main/java/com/challenge/meli/product_comparator/infrastructure/adapter/repository/decorators/CachedProductRepository.java
+/Users/matiasgonzalez/Proyectos/product-comparator/product-comparator/src/main/java/com/challenge/meli/product_comparator/application/impl/ProductServiceImpl.java
+/Users/matiasgonzalez/Proyectos/product-comparator/product-comparator/src/main/java/com/challenge/meli/product_comparator/domain/model/Product.java
+/Users/matiasgonzalez/Proyectos/product-comparator/product-comparator/src/main/java/com/challenge/meli/product_comparator/application/port/in/ProductService.java
+/Users/matiasgonzalez/Proyectos/product-comparator/product-comparator/src/main/java/com/challenge/meli/product_comparator/api/controller/ProductController.java
+/Users/matiasgonzalez/Proyectos/product-comparator/product-comparator/src/main/java/com/challenge/meli/product_comparator/infrastructure/config/RepositoryConfig.java
+/Users/matiasgonzalez/Proyectos/product-comparator/product-comparator/src/main/java/com/challenge/meli/product_comparator/domain/policy/impl/BestRatingStrategy.java
+/Users/matiasgonzalez/Proyectos/product-comparator/product-comparator/src/main/java/com/challenge/meli/product_comparator/api/config/OpenApiConfig.java
+/Users/matiasgonzalez/Proyectos/product-comparator/product-comparator/src/main/java/com/challenge/meli/product_comparator/api/dto/PriceDiff.java
+/Users/matiasgonzalez/Proyectos/product-comparator/product-comparator/src/main/java/com/challenge/meli/product_comparator/infrastructure/adapter/repository/FileProductRepository.java
+/Users/matiasgonzalez/Proyectos/product-comparator/product-comparator/src/main/java/com/challenge/meli/product_comparator/infrastructure/adapter/repository/MeliProductRepository.java
+/Users/matiasgonzalez/Proyectos/product-comparator/product-comparator/src/main/java/com/challenge/meli/product_comparator/exception/GlobalExceptionHandler.java
+/Users/matiasgonzalez/Proyectos/product-comparator/product-comparator/src/main/java/com/challenge/meli/product_comparator/api/dto/ErrorResponse.java
+/Users/matiasgonzalez/Proyectos/product-comparator/product-comparator/src/main/java/com/challenge/meli/product_comparator/exception/NotFoundException.java
+/Users/matiasgonzalez/Proyectos/product-comparator/product-comparator/src/main/java/com/challenge/meli/product_comparator/api/dto/ProductResponse.java
+/Users/matiasgonzalez/Proyectos/product-comparator/product-comparator/src/main/java/com/challenge/meli/product_comparator/domain/config/StrategyConfig.java

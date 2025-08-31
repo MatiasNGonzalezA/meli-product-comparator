@@ -1,11 +1,13 @@
 package com.challenge.meli.product_comparator.api.controller;
 
-import com.challenge.meli.product_comparator.application.implementation.ComparisonServiceImpl;
-import com.challenge.meli.product_comparator.application.implementation.ProductServiceImpl;
-import com.challenge.meli.product_comparator.domain.model.Product;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import com.challenge.meli.product_comparator.api.dto.CompareResponse;
+import com.challenge.meli.product_comparator.api.mapper.ProductMapper;
+import com.challenge.meli.product_comparator.api.dto.ProductResponse;
+import com.challenge.meli.product_comparator.application.port.in.ComparisonService;
+import com.challenge.meli.product_comparator.application.port.in.ProductService;
+import com.challenge.meli.product_comparator.domain.policy.StrategyType;
+import org.springframework.http.MediaType;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
@@ -13,17 +15,35 @@ import java.util.List;
 @RequestMapping("/products")
 public class ProductController {
 
-    private final ProductServiceImpl productService;
-    private final ComparisonServiceImpl comparisonService;
+    private final ProductService productService;
+    private final ComparisonService comparisonService;
 
-    public ProductController(ProductServiceImpl productService, ComparisonServiceImpl comparisonService) {
+    public ProductController(ProductService productService, ComparisonService comparisonService) {
         this.productService = productService;
         this.comparisonService = comparisonService;
     }
 
     @GetMapping
-    public List<Product> getAll(){
-        return null;
+    public List<ProductResponse> getAllProducts() {
+        return productService.getAllProducts().stream()
+                .map(ProductMapper::toResponse)
+                .toList();
+    }
+
+    @GetMapping("/{id}")
+    public ProductResponse getProductById(@PathVariable String id) {
+        return ProductMapper.toResponse(productService.getById(id));
+    }
+
+    /**
+     * Compara múltiples productos por IDs
+     * Ejemplo: /products/compare?ids=1,2,3
+     */
+    @GetMapping(value = "/compare", produces = MediaType.APPLICATION_JSON_VALUE)
+    public CompareResponse compareProducts(@RequestParam List<String> ids,
+                                           @RequestParam(required = false, name = "strategy") String strategyRaw) {
+        var strategy = StrategyType.from(strategyRaw);
+        return comparisonService.compare(ids, strategy);
     }
 
 
