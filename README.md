@@ -56,15 +56,8 @@ Ejemplo:
      "http://localhost:8080/api/products/compare?ids=1,2&strategy=RATING"
 
 ## 🏗️ Ejecución local
-	1.	Clonar el repositorio:
-      git clone https://github.com/MatiasNGonzalezA/meli-product-comparator.git
-      cd product-comparator
 
-	2.	Compilar y ejecutar con Maven:
-      ./mvnw spring-boot:run
-
-   	3.	Acceder a la API en:
-      http://localhost:8080/api/products
+👉 Ver el archivo run.md para instrucciones de ejecución local, tests y docker.
 
 
 
