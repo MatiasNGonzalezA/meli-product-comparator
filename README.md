@@ -36,7 +36,7 @@ Esto permite aislar el **core de negocio** de las dependencias externas.
 - **Adapter:** conexión a distintas fuentes de datos (archivo JSON local, API externa).
 
 ---
-
+s
 ## 📦 Endpoints principales
 Base path: `/api`
 
@@ -52,9 +52,8 @@ Base path: `/api`
   - Param opcional: `strategy=RATING`
 
 Ejemplo:
-```bash
-curl "http://localhost:8080/api/products/compare?ids=1,2&strategy=RATING"
 
+     "http://localhost:8080/api/products/compare?ids=1,2&strategy=RATING"
 
 ## 🏗️ Ejecución local
 	1.	Clonar el repositorio:
@@ -67,7 +66,7 @@ curl "http://localhost:8080/api/products/compare?ids=1,2&strategy=RATING"
    	3.	Acceder a la API en:
       http://localhost:8080/api/products
 
-  
+
 
 
 ## 🧪 Tests
@@ -91,7 +90,7 @@ incluyen pruebas unitarias de servicios, repositorios y controladores (con Mocki
 
     Cuando la app esté levantada:
     👉 http://localhost:8080/swagger-ui
-    
+
 
 
 ## 📝 Configuración
@@ -120,11 +119,11 @@ incluyen pruebas unitarias de servicios, repositorios y controladores (con Mocki
 +-------------------+   +-------------------+
 | FileProductRepo   |   | CachedRepository  |
 +-------------------+   +-------------------+
-                    |
-                    v
-          +-------------------+
-          |   Product (dom)   |
-          +-------------------+
+|
+v
++-------------------+
+|   Product (dom)   |
++-------------------+
 
 
 
@@ -132,3 +131,6 @@ incluyen pruebas unitarias de servicios, repositorios y controladores (con Mocki
 
     Matías González
     Desarrollador Java Backend
+
+
+
