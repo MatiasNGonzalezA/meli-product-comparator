@@ -97,27 +97,25 @@ incluyen pruebas unitarias de servicios, repositorios y controladores (con Mocki
 
 
 ## 📊 Diagrama simple
-         +---------------------+
-         |   ProductController |
-         +---------------------+
-                    |
-                    v
-         +---------------------+
-         |   ProductService    |
-         +---------------------+
-                    |
-          -----------------------
-          |                     |
-          v                     v
-  +-------------------+     +-------------------+
-  | FileProductRepo   |     | CachedRepository  |
-  +-------------------+     +-------------------+
-  |
-  v
-  +-------------------+
-  |   Product (dom)   |
-  +-------------------+
-
+  ```text
++------------------+
+| ProductController|
++------------------+
+         |
+         v
++------------------+
+|  ProductService  |
++------------------+
+     |          |
+     v          v
++------------------+    +------------------+
+|  FileProductRepo |    | CachedRepository |
++------------------+    +------------------+
+            \              /
+             v            v
+           +------------------+
+           |   Product (dom)  |
+           +------------------+
 
 
 ## 👤 Autor
