@@ -109,14 +109,14 @@ incluyen pruebas unitarias de servicios, repositorios y controladores (con Mocki
           -----------------------
           |                     |
           v                     v
-+-------------------+   +-------------------+
-| FileProductRepo   |   | CachedRepository  |
-+-------------------+   +-------------------+
-|
-v
-+-------------------+
-|   Product (dom)   |
-+-------------------+
+  +-------------------+     +-------------------+
+  | FileProductRepo   |     | CachedRepository  |
+  +-------------------+     +-------------------+
+  |
+  v
+  +-------------------+
+  |   Product (dom)   |
+  +-------------------+
 
 
 
