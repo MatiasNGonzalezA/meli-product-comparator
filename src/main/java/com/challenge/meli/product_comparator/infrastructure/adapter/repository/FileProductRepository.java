@@ -3,13 +3,10 @@ package com.challenge.meli.product_comparator.infrastructure.adapter.repository;
 import com.challenge.meli.product_comparator.domain.model.Product;
 import com.challenge.meli.product_comparator.application.port.out.ProductRepository;
 
-import com.fasterxml.jackson.core.type.TypeReference;
 import com.fasterxml.jackson.databind.ObjectMapper;
-import org.springframework.core.io.Resource;
 import org.springframework.core.io.ResourceLoader;
 
 import java.io.IOException;
-import java.io.InputStream;
 import java.util.*;
 
 public class FileProductRepository implements ProductRepository {

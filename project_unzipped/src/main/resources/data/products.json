@@ -1,0 +1,137 @@
+[
+  {
+    "id": 1,
+    "name": "Laptop Dell Inspiron 15",
+    "description": "Notebook de 15.6 pulgadas con procesador Intel i7 y 16GB RAM.",
+    "price": 1250.99,
+    "rating": 4.5,
+    "imageUrl": "https://example.com/images/dell-inspiron15.jpg",
+    "specs": "Intel Core i7, 16GB RAM, 512GB SSD, Windows 11"
+  },
+  {
+    "id": 2,
+    "name": "Smartphone Samsung Galaxy S23",
+    "description": "Celular de última generación con cámara triple y pantalla AMOLED.",
+    "price": 999.49,
+    "rating": 4.8,
+    "imageUrl": "https://example.com/images/samsung-s23.jpg",
+    "specs": "6.1'' AMOLED, 8GB RAM, 256GB Storage, Android 13"
+  },
+  {
+    "id": 3,
+    "name": "Auriculares Sony WH-1000XM5",
+    "description": "Auriculares inalámbricos con cancelación de ruido líder en el mercado.",
+    "price": 349.99,
+    "rating": 4.7,
+    "imageUrl": "https://example.com/images/sony-wh1000xm5.jpg",
+    "specs": "Bluetooth 5.2, Cancelación de ruido, Batería 30h"
+  },
+  {
+    "id": 4,
+    "name": "Smart TV LG OLED55",
+    "description": "Televisor OLED de 55 pulgadas con resolución 4K y Dolby Vision.",
+    "price": 1450.00,
+    "rating": 4.6,
+    "imageUrl": "https://example.com/images/lg-oled55.jpg",
+    "specs": "55'' OLED, 4K UHD, HDR10, Dolby Vision, WebOS"
+  },
+  {
+    "id": 5,
+    "name": "Apple Watch Series 9",
+    "description": "Reloj inteligente con monitoreo de salud y GPS integrado.",
+    "price": 499.00,
+    "rating": 4.4,
+    "imageUrl": "https://example.com/images/apple-watch9.jpg",
+    "specs": "GPS, Oxígeno en sangre, Resistencia al agua 50m"
+  },
+  {
+    "id": 6,
+    "name": "Tablet iPad Air 5",
+    "description": "Tablet ligera y potente con chip M1 de Apple.",
+    "price": 699.00,
+    "rating": 4.7,
+    "imageUrl": "https://example.com/images/ipad-air5.jpg",
+    "specs": "10.9'' Liquid Retina, Chip M1, 64GB, iPadOS"
+  },
+  {
+    "id": 7,
+    "name": "Consola PlayStation 5",
+    "description": "Consola de videojuegos de nueva generación con gráficos 4K.",
+    "price": 799.99,
+    "rating": 4.9,
+    "imageUrl": "https://example.com/images/ps5.jpg",
+    "specs": "CPU AMD Ryzen Zen 2, GPU RDNA 2, 16GB RAM, SSD 825GB"
+  },
+  {
+    "id": 8,
+    "name": "Kindle Paperwhite",
+    "description": "Lector de libros electrónicos con pantalla de alta resolución.",
+    "price": 159.99,
+    "rating": 4.6,
+    "imageUrl": "https://example.com/images/kindle-paperwhite.jpg",
+    "specs": "Pantalla 6.8'' e-Ink, 8GB almacenamiento, Resistente al agua"
+  },
+  {
+    "id": 9,
+    "name": "Mouse Logitech MX Master 3S",
+    "description": "Mouse inalámbrico ergonómico de alto rendimiento.",
+    "price": 129.99,
+    "rating": 4.7,
+    "imageUrl": "https://example.com/images/logitech-mxmaster3s.jpg",
+    "specs": "Bluetooth/USB, DPI ajustable, 7 botones programables"
+  },
+  {
+    "id": 10,
+    "name": "Teclado Mecánico Redragon Kumara",
+    "description": "Teclado mecánico compacto con retroiluminación RGB.",
+    "price": 79.99,
+    "rating": 4.5,
+    "imageUrl": "https://example.com/images/redragon-kumara.jpg",
+    "specs": "Switches Outemu Blue, USB, Iluminación RGB"
+  },
+  {
+    "id": 11,
+    "name": "Silla Gamer Corsair T3 Rush",
+    "description": "Silla ergonómica con diseño gamer y soporte lumbar.",
+    "price": 299.99,
+    "rating": 4.4,
+    "imageUrl": "https://example.com/images/corsair-t3rush.jpg",
+    "specs": "Ajustable en altura, Reclinable 180°, Cojines incluidos"
+  },
+  {
+    "id": 12,
+    "name": "Parlante JBL Charge 5",
+    "description": "Parlante portátil con sonido potente y batería de larga duración.",
+    "price": 199.99,
+    "rating": 4.6,
+    "imageUrl": "https://example.com/images/jbl-charge5.jpg",
+    "specs": "Bluetooth 5.1, IP67, 20 horas de batería"
+  },
+  {
+    "id": 13,
+    "name": "Cámara GoPro Hero 11",
+    "description": "Cámara de acción resistente al agua con grabación en 5.3K.",
+    "price": 449.99,
+    "rating": 4.8,
+    "imageUrl": "https://example.com/images/gopro-hero11.jpg",
+    "specs": "5.3K60, 27MP fotos, HyperSmooth 5.0, Sumergible 10m"
+  },
+  {
+    "id": 14,
+    "name": "Monitor Samsung Odyssey G7",
+    "description": "Monitor curvo gamer de 27 pulgadas con tasa de refresco de 240Hz.",
+    "price": 699.99,
+    "rating": 4.7,
+    "imageUrl": "https://example.com/images/samsung-odyssey-g7.jpg",
+    "specs": "27'' QHD, 240Hz, 1ms, G-Sync compatible"
+  },
+  {
+    "id": 15,
+    "name": "Router TP-Link Archer AX6000",
+    "description": "Router WiFi 6 de alto rendimiento para gaming y streaming.",
+    "price": 349.99,
+    "rating": 4.6,
+    "imageUrl": "https://example.com/images/tplink-ax6000.jpg",
+    "specs": "WiFi 6, 8 antenas, 1.8GHz Quad-Core, OFDMA, MU-MIMO"
+  }
+]

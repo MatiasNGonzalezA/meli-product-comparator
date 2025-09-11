@@ -16,6 +16,7 @@ public class CachedProductRepository implements ProductRepository {
 
     @Override
     public List<Product> findAll() {
+        // (opcional) podrías cachear la lista completa si te sirve
         return delegate.findAll();
     }
 
@@ -46,6 +47,7 @@ public class CachedProductRepository implements ProductRepository {
             }
         }
 
+        // conservar orden solicitado
         Map<String, Product> byId = new HashMap<>();
         for (Product p : result) byId.put(p.getId(), p);
 

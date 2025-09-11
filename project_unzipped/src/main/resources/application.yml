@@ -1,0 +1,75 @@
+server:
+  port: 8080
+  servlet:
+    context-path: /api
+  compression:
+    enabled: true
+    mime-types: text/html,text/xml,text/plain,text/css,application/json,application/javascript
+    min-response-size: 1KB
+
+spring:
+  application:
+    name: products-service
+  profiles:
+    active: file  
+  main:
+    banner-mode: console
+  jackson:
+    serialization:
+      indent-output: true
+    default-property-inclusion: non_null
+    deserialization:
+      fail-on-unknown-properties: false
+    time-zone: America/Argentina/Buenos_Aires
+  mvc:
+    cors:
+      mappings:
+        "/**":
+          allowed-origins:
+            - http://localhost:5173
+            - http://localhost:3000
+          allowed-methods: [GET, POST, PUT, PATCH, DELETE, OPTIONS]
+          allowed-headers: "*"
+          allow-credentials: true
+          max-age: 3600
+  web:
+    resources:
+      cache:
+        period: 1h
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: health,info
+  endpoint:
+    health:
+      show-details: never
+
+logging:
+  level:
+    root: INFO
+    org.springframework: INFO
+    org.springframework.web: INFO
+    org.springdoc: INFO
+    com.challenge.meli.product_comparator: DEBUG
+
+app:
+  data:
+    source: "classpath:data/products.json"
+  paging:
+    default-page-size: 20
+    max-page-size: 100
+  features:
+    enable-sorting: true
+    enable-filtering: true
+
+springdoc:
+  paths-to-match: /products/**
+  api-docs:
+    enabled: true
+    path: /v3/api-docs
+  swagger-ui:
+    enabled: true
+    path: /swagger-ui
+    display-request-duration: true

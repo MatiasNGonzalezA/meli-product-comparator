@@ -1,8 +1,0 @@
-com/challenge/meli/product_comparator/ProductComparatorApplicationTests.class
-com/challenge/meli/product_comparator/application/impl/ComparisonServiceImplStrategyTest.class
-com/challenge/meli/product_comparator/api/controller/mapper/ProductMapperTest.class
-com/challenge/meli/product_comparator/application/impl/ProductServiceImplTest.class
-com/challenge/meli/product_comparator/exception/GlobalExceptionHandlerTest.class
-com/challenge/meli/product_comparator/infrastructure/repository/FileProductRepositoryTest.class
-com/challenge/meli/product_comparator/exception/GlobalExceptionHandlerTest$ThrowingController.class
-com/challenge/meli/product_comparator/api/controller/ProductControllerTest.class
